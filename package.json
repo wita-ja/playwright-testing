@@ -1,0 +1,22 @@
+{
+  "name": "playwright-poc",
+  "version": "1.0.0",
+  "description": "Repo to play with playwright",
+  "dependencies": {
+    "dotenv": "16.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.19.2"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wita-ja/playwright-testing.git"
+  },
+  "author": "Wita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wita-ja/playwright-testing/issues"
+  },
+  "homepage": "https://github.com/wita-ja/playwright-testing#readme"
+}
