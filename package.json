@@ -6,9 +6,14 @@
     "dotenv": "16.0.0"
   },
   "devDependencies": {
-    "@playwright/test": "1.19.2"
+    "@playwright/test": "1.19.2",
+    "allure-commandline": "2.17.2",
+    "allure-playwright": "2.0.0-beta.16"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test --reporter=allure-playwright",
+    "open-allure": "npx allure serve ./allure-results/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wita-ja/playwright-testing.git"
