@@ -15,7 +15,9 @@ test.describe('Login', () => {
       await loginPage.enterCredentials(credential.username, credential.password);
       await loginPage.submit();
 
-      const expectedValue = credential === credentials[1] ? true : false;
+      const expectedValue = credential === credentials[0] ? true : false;
+
+      await loginPage.page.pause();
       expect(await loginPage.pageHeader.isHidden(), 'Login page logo still visible').toBe(expectedValue);
     });
   }

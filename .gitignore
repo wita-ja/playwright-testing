@@ -106,3 +106,4 @@ dist
 test-results/
 playwright-report/
 allure-results
+allure-report

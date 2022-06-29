@@ -11,8 +11,10 @@
     "allure-playwright": "2.0.0-beta.16"
   },
   "scripts": {
-    "test": "npx playwright test --reporter=allure-playwright",
-    "open-allure": "npx allure serve ./allure-results/"
+    "test": "npx playwright test",
+    "serve-allure": "npx allure serve ./allure-results/",
+    "generate-allure": "npx allure generate ./allure-results/",
+    "open-allure": "npx allure open ./Allure-report/"
   },
   "repository": {
     "type": "git",
