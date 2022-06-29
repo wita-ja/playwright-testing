@@ -11,7 +11,7 @@ test.describe('Login', () => {
   });
 
   for (const credential of credentials) {
-    test(`Login with ${credential.isValid ? 'valid' : 'invalid'} credentials`, async () => {
+    test.skip(`Login with ${credential.isValid ? 'valid' : 'invalid'} credentials`, async () => {
       await loginPage.enterCredentials(credential.username, credential.password);
       await loginPage.submit();
 
