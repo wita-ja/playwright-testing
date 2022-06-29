@@ -36,6 +36,7 @@ jobs:
       - name: Run your tests
         run: npm run test
       - name: Generate allure result
+        if: always()
         run: npm run generate-allure
       - name: Upload test results
         if: always()
