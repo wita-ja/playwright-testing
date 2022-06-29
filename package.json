@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "npx playwright test --reporter=allure-playwright",
-    "open-allure": "npx allure serve ./allure-results/"
+    "open-allure": "npx allure serve ./allure-results/",
+    "generate-allure": "npx allure generate ./allure-results/"
   },
   "repository": {
     "type": "git",
