@@ -1,4 +1,5 @@
 import { Locator, Page } from "@playwright/test";
+import { credentials, Credential } from "../../resources/credentials";
 import { LoginPageModel } from "./LoginPageModel";
 
 export class LoginPage {
@@ -7,6 +8,7 @@ export class LoginPage {
   public readonly usernameInput: Locator;
   public readonly passwordInput: Locator;
   public readonly pageHeader: Locator;
+  private readonly validCredentials: Credential;
 
   constructor(page: Page) {
     this.page = page;
@@ -14,6 +16,7 @@ export class LoginPage {
     this.usernameInput = page.locator(LoginPageModel.USERNAME_INPUT);
     this.passwordInput = page.locator(LoginPageModel.PASSWORD_INPUT);
     this.pageHeader = page.locator(LoginPageModel.PAGE_HEADER);
+    this.validCredentials = credentials[0];
   }
 
   public async enterCredentials(username: string, password: string): Promise<void> {
@@ -29,4 +32,9 @@ export class LoginPage {
     await this.logInButton.click();
   }
 
+  public async login(): Promise<void> {
+    await this.open();
+    await this.enterCredentials(this.validCredentials.username, this.validCredentials.password);
+    await this.submit();
+  }
 }
